@@ -1,0 +1,151 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Bruce's home page</title>
+  <meta name="description" content="Bruce's home page">
+  <meta name="author" content="Bruce Alderson @robotpony">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,100,200,300,500' rel='stylesheet' type='text/css'>
+
+<style>
+body {
+    position: fixed; width: 100%; height: 100%;
+    background: url(images/bg.jpg) no-repeat center center fixed;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+aside {
+    margin-left: 5%;
+    margin-top: 20%;
+    width: 60%;
+    float: left;
+}
+aside > h1 {
+    font-weight: 400;
+    font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    text-align: center;
+}
+#clock {
+    font-size: 128pt;
+    font-weight: 300;
+    text-align: center;
+}
+div.info {
+    width: 22%;
+    float: right;
+    margin-top: 10%;
+    margin-right: 5%;
+}
+div.links {
+    background-color: rgba(0,0,0,.3);
+    margin: .75em 5%;
+    padding: .75em 1em;
+    border-radius: .25em;
+}
+
+div.links h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 10pt;
+    margin: 0;
+    text-align: center;
+    padding-bottom: .5em;
+    border-bottom: 1px dashed;
+    border-color: rgba(255,255,255, .75);
+}
+
+div.links ul {
+    list-style-type: none;
+    margin: 1em 0; padding: 0;
+}
+div.links ul li {
+    margin: 0; padding: 0;
+}
+
+div.links ul li a {
+    font-size: 11pt;
+    color: #fff;
+    text-decoration: none;
+}
+div.links ul li a:hover {
+    text-decoration: underline;
+}
+
+</style>
+</head>
+<body>
+
+<aside>
+    <div id="clock">00:00</div>
+    <h1>Bruce's machine</h1>
+</aside>
+
+<div class="info">
+<div class="links">
+    <h2>Me</h2>
+    <ul>
+        <li><a href="https://mail.google.com/mail/u/1/" target="_blank">✉️ mx@warpedvisions.org</a></li>
+    </ul>
+</div>
+
+<div class="links">
+    <h2>🍋 LemonStand 🍋</h2>
+    <ul>
+        <li><a href="https://mail.google.com/mail/u/0/" target="_blank">✉️ bruce@lemonstand.com</a></li>
+    </ul>
+</div>
+
+<div class="links">
+    <h2>NapkinWare</h2>
+    <ul>
+        <li><a href="https://mail.google.com/mail/u/2/" target="_blank">✉️ bruce@napkinware.com</a></li>
+    </ul>
+</div>
+</div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+<script>
+function updateClock ( )
+ 	{
+ 	var currentTime = new Date ( );
+  	var currentHours = currentTime.getHours ( );
+  	var currentMinutes = currentTime.getMinutes ( );
+  	var currentSeconds = currentTime.getSeconds ( );
+
+  	// Pad the minutes and seconds with leading zeros, if required
+  	currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+
+  	// Choose either "AM" or "PM" as appropriate
+  	var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+
+  	// Convert the hours component to 12-hour format if needed
+  	currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+
+  	// Convert an hours component of "0" to "12"
+  	currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+
+  	// Compose the string for display
+  	var currentTimeString = currentHours + ":" + currentMinutes + " " + timeOfDay;
+
+
+   	$("#clock").html(currentTimeString);
+
+ }
+
+$(document).ready(function()
+{
+    updateClock();
+    setInterval('updateClock()', 30000);
+});
+
+</script>
+
+</html>
