@@ -1,2 +1,9 @@
-# robotpony-home-page
-Home page SSS
+# Browser default home page
+
+Includes:
+
+* a clock
+* links to things
+* a lovely image
+
+
