@@ -16,6 +16,7 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     color: #fff;
+    min-height: 700px;
 }
 aside {
     margin-left: 1.5%;
@@ -24,11 +25,12 @@ aside {
     float: left;
 }
 aside > h1 {
-    font-weight: 400;
+    font-weight: 200;
     font-size: 14pt;
     text-transform: uppercase;
     letter-spacing: .5em;
     text-align: center;
+    margin-top: 2em;
 }
 #clock {
     font-size: 128pt;
@@ -36,15 +38,16 @@ aside > h1 {
     text-align: center;
 }
 #clock span {
+    position: relative; bottom: -.75em;
     font-size: 20pt;
-    font-weight: 400;
+    font-weight: 200;
     opacity: .85;
 }
 div.info {
-    width: 350px;
+    width: 325px;
     float: right;
-    margin-top: 11.5%;
-    margin-right: 10%;
+    margin-top: 25px;
+    margin-right: 50px;
 }
 div.links {
     background-color: rgba(0,0,0,.4);
@@ -54,9 +57,9 @@ div.links {
     overflow: hidden;
 }
 div.links.reading {
+    position: fixed; bottom: 25px;
     clear: both;
-    width: 82%;
-    margin-right: 10%;
+    width: 100%;
     background-color: transparent;
 }
 
