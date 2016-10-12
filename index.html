@@ -56,13 +56,25 @@ div.links {
     border-radius: .25em;
     overflow: hidden;
 }
+div.links.reading.subtle {
+    opacity: .25;
+}
+div.links.reading.subtle,
+div.links.reading.subtle > ul {
+    transition: opacity .25s ease-in;
+
+}
+div.links.reading.subtle:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
 div.links.reading {
     position: fixed; bottom: 25px;
     clear: both;
     width: 100%;
     background-color: transparent;
 }
-
 div.links h2 {
     text-transform: uppercase;
     letter-spacing: .25em;
@@ -147,6 +159,7 @@ body > footer p a {
 <div class="links">
     <h2>🍋 LemonStand 🍋</h2>
     <ul>
+        <li><a href="https://github.com/lemonstand/lemonstand-2/projects" target="_blank">✏️ projects</a></li>
         <li><a href="https://docs.google.com/spreadsheets/d/1QKRhfOSZCq9-3fQK1uIG9nayeaSeXZa2JHkTpbSYfNc/edit#gid=1196235433" target="_blank">📊 metrics</a></li>
         <li><a href="https://mail.google.com/mail/u/0/" target="_blank">✉️ bruce@lemonstand.com</a></li>
         <li><a href="https://calendar.google.com/calendar/render#main_7" target="_blank">📅 calendar</a></li>
@@ -166,17 +179,15 @@ body > footer p a {
 </div>
 </div>
 
-<div class="reading links">
-    <h2>Reading: </h2>
+<div class="reading links subtle">
+    <h2>Reading</h2>
     <ul>
         <li><a href="https://news.ycombinator.com" target="_blank">hackernews</a>
         <li><a href="http://feedly.com/i/latest" target="_blank">feedly</a>
         <li><a href="https://flipboard.com" target="_blank">flipboard</a>
         <li><a href="https://www.reddit.com/r/programming/" target="_blank">/r/programming</a>
         <li><a href="https://www.reddit.com/r/seriouseats/" target="_blank">/r/seriouseats</a>
-        <li><a href="https://www.reddit.com/r/food/" target="_blank">/r/food</a>
-        <li><a href="https://www.reddit.com/r/FoodPorn/" target="_blank">/r/foodpics</a>
-
+        <li><a href="https://www.reddit.com/r/PrintMaking/" target="_blank">/r/printmaking</a>
     </ul>
 </div>
 
